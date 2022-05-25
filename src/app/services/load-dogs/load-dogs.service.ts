@@ -6,13 +6,10 @@ import { catchError, retry } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-export class LoadDogsService {
-  dogsAPIurl: string =
-    'https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=50';
-
+export class LoadPetsService {
   constructor(private http: HttpClient) {}
-
-  getDogs(): Observable<any> {
-    return this.http.get(this.dogsAPIurl, {});
+  
+  getDogs(dogsAPIurl: string): Observable<any> {
+    return this.http.get(dogsAPIurl, {});
   }
 }

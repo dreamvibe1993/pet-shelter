@@ -1,6 +1,6 @@
 import { Breed } from "./breed";
 
-export interface Dog {
+export interface Pet {
   breeds: Array<Breed>;
   height: number;
   id: string;

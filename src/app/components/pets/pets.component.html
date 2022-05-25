@@ -1,0 +1,32 @@
+<div class="flex bg-slate-400 justify-center" cdkDropListGroup>
+  <div
+    [cdkDropListData]="petsArray1"
+    (cdkDropListDropped)="drop($event)"
+    cdkDropList
+    class="flex flex-col"
+  >
+    <div *ngFor="let pet of petsArray1" cdkDrag>
+      <app-pet-card [breed]="pet.breeds[0]" [img]="pet.url"></app-pet-card>
+    </div>
+  </div>
+  <div
+    [cdkDropListData]="petsArray2"
+    (cdkDropListDropped)="drop($event)"
+    cdkDropList
+    class="flex flex-col"
+  >
+    <div *ngFor="let pet of petsArray2" cdkDrag>
+      <app-pet-card [breed]="pet.breeds[0]" [img]="pet.url"></app-pet-card>
+    </div>
+  </div>
+  <div
+    [cdkDropListData]="petsArray3"
+    (cdkDropListDropped)="drop($event)"
+    cdkDropList
+    class="flex flex-col"
+  >
+    <div *ngFor="let pet of petsArray3" cdkDrag>
+      <app-pet-card [breed]="pet.breeds[0]" [img]="pet.url"></app-pet-card>
+    </div>
+  </div>
+</div>
